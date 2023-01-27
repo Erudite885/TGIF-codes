@@ -12,9 +12,9 @@ body {
 
 button {
   font: inherit;
-  border: 1px solid #000053;
+  border: 1px solid #770c4e;
   color: white;
-  background: #000053;
+  background: #770c4e;
   padding: 0.5rem 1.5rem;
   border-radius: 5px;
   cursor: pointer;
@@ -26,8 +26,8 @@ button:focus {
 
 button:hover,
 button:active {
-  background: #12128a;
-  border-color: #12128a;
+  background: #8a1280;
+  border-color: #8a1280;
 }
 
 label,
@@ -48,7 +48,7 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #000053;
+  border-color: #770c4e;
 }
 
 section {
