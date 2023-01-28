@@ -1,5 +1,7 @@
 const listEl = document.querySelector(".posts");
 const postTemplate = document.getElementById("single-post");
+const form = document.querySelector("#new-post form");
+const fetchButton = document.querySelector("#available-posts button");
 
 function sendHttpRequest(method, url, data) {
   const promise = new Promise((resolve, reject) => {
@@ -44,5 +46,10 @@ async function createPost(title, content) {
   sendHttpRequest("POST", "http://jsonplaceholder.typicode.com/posts", post);
 }
 
-fetchPosts();
-createPost("dummdum", "a dumdum post");
+fetchButton.addEventListener("click", fetchPosts);
+form.addEventListener("submit", event =>{
+  event.preventDefault();
+  const enteredTitle = event.currentTarget.querySelector('#title').value;
+  const enteredContent = event.currentTarget.querySelector('#content').value;
+  createPost(enteredTitle, enteredContent);
+})
