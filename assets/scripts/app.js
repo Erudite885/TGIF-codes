@@ -60,7 +60,7 @@ postList.addEventListener("click", (event) => {
   if (event.target.tagName === "BUTTON") {
     const postId = event.target.closest("li".id);
     sendHttpRequest(
-      "DALETE",
+      "DELETE",
       `http://jsonplaceholder.typicode.com/posts/${postId}`
     );
   }
